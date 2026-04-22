@@ -43,3 +43,9 @@ CREATE TABLE IF NOT EXISTS book_author (
     FOREIGN KEY (book_id) REFERENCES books(book_id) ON DELETE CASCADE,
     FOREIGN KEY (author_id) REFERENCES authors(author_id) ON DELETE CASCADE
 );
+
+CREATE INDEX IF NOT EXISTS idx_books_rating ON books(rating);
+CREATE INDEX IF NOT EXISTS idx_books_category ON books(category_id);
+CREATE INDEX IF NOT EXISTS idx_authors_country ON authors(country);
+CREATE INDEX IF NOT EXISTS idx_book_author_book ON book_author(book_id;)
+CREATE INDEX IF NOT EXISTS idx_book_author_author ON book_author(author_id);
